@@ -1,6 +1,9 @@
 Mopidy
-Mopidy-Iris
 Mopidy-MPD
 Mopidy-local
-Mopidy-musicbox_webclient
 mopidy-mobile
+Mopidy-AlsaMixer
+Mopidy-SomaFM
+Mopidy-TuneIn
+Mopidy-Podcast-iTunes
+Mopidy-Podcast
