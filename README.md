@@ -47,6 +47,30 @@ Using docker-compose:
 Using docker:  
 `$ docker exec CONTAINER_NAME mopidy local scan`
 
+## Docker Compose
+
+An example docker-compose file:
+
+```compose
+version: "3"
+services:
+  mopidy:
+    image: neurove/mopidy:latest
+    container_name: mopidy
+    devices:
+    - "/dev/snd"
+    ports:
+    - "6600:6600"
+    - "6680:6680"
+    environment:
+    - TZ=Europe/Berlin
+    restart: unless-stopped
+    volumes:
+    - /srv/music/:/music/
+    - /home/pi/docker/mopidy/config/mopidy/:/home/mopidy/.config/mopidy/
+    - /home/pi/docker/mopidy/config/asound.conf:/etc/asound.conf
+```
+
 ## License
 
 Open Source MIT License
